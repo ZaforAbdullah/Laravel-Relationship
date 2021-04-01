@@ -3,6 +3,7 @@
 use App\User;
 use App\Phone;
 use App\Post;
+use App\Comment;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,4 +33,12 @@ Route::get('/hasMany', function () {
     foreach ($comments as $comment) {
         echo($comment);
     }
+});
+
+Route::get('/hasOne_1', function () {
+    //One To Many (Inverse) Relationship
+    $comment = Comment::find(1);
+
+    echo($comment);
+
 });
