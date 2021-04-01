@@ -17,3 +17,9 @@ Route::get('/hasOne', function () {
     $phone = User::find(1)->phone;
     echo($phone);
 });
+
+
+Route::get('/belongsTo', function () {
+    $user = Phone::find(1)->user;
+    echo($user);
+});
