@@ -2,6 +2,8 @@
 
 use App\User;
 use App\Phone;
+use App\Post;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,4 +24,12 @@ Route::get('/hasOne', function () {
 Route::get('/belongsTo', function () {
     $user = Phone::find(1)->user;
     echo($user);
+});
+
+Route::get('/hasMany', function () {
+    $comments = Post::find(1)->comments;
+
+    foreach ($comments as $comment) {
+        echo($comment);
+    }
 });
