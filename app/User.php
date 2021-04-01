@@ -27,5 +27,11 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-
+    /**
+     * Get the phone record associated with the user.
+     */
+    public function phone()
+    {
+        return $this->hasOne('App\Phone');
+    }
 }

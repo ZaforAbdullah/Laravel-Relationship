@@ -13,4 +13,7 @@ use App\Phone;
 |
 */
 
-
+Route::get('/hasOne', function () {
+    $phone = User::find(1)->phone;
+    echo($phone);
+});
