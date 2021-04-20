@@ -42,3 +42,8 @@ Route::get('/hasOne_1', function () {
     echo($comment);
 
 });
+
+Route::get('product/create', 'ProductController@create')->name('product.create'); //M:M
+Route::get('product/{product}', 'ProductController@show')->name('product.show');  //M:M
+Route::get('category/product/{product}', 'ProductController@removeCategory')
+                                            ->name('category.product.delete');    //M:M
