@@ -47,3 +47,6 @@ Route::get('product/create', 'ProductController@create')->name('product.create')
 Route::get('product/{product}', 'ProductController@show')->name('product.show');  //M:M
 Route::get('category/product/{product}', 'ProductController@removeCategory')
                                             ->name('category.product.delete');    //M:M
+
+Route::get('/post/{post}', 'PostController@show')->name('post.show'); //Polymorphic Relationship
+Route::get('/video/{video}', 'VideoController@show')->name('video.show'); //Polymorphic Relationship
